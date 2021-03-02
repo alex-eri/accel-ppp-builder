@@ -15,7 +15,7 @@ pushd build/
 
 export CPACK_DEBIAN_PACKAGE_DEPENDS="$(cat /scripts/ubuntu-deps-runtime)"
 
-cmake -DSHAPER=TRUE -DNETSNMP=TRUE ../accel-ppp/ 
+cmake -DSHAPER=TRUE -DNETSNMP=TRUE -DLUA=TRUE ../accel-ppp/ 
 cmake --build .
 
 cpack -G DEB

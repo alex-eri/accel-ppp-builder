@@ -6,3 +6,4 @@ libssl-dev
 libpcre3-dev
 libsnmp-dev
 linux-headers-generic
+liblua5.1-0-dev

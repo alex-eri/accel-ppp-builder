@@ -33,5 +33,16 @@ Alias=accel-ppp.service
 EOF
 
 nano /etc/accel-ppp.conf
+
+mkdir -p /etc/ppp/
+touch /etc/ppp/ip-up
+touch /etc/ppp/ip-down
+touch /etc/ppp/chap-secrets
+
+chmod +x /etc/ppp/ip-up
+chmod +x /etc/ppp/ip-down
+
+
 systemctl start accel-ppp.service
+
 ```

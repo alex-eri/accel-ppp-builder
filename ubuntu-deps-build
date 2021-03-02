@@ -1,0 +1,7 @@
+build-essential
+git
+cmake
+libnl-3-dev
+libssl-dev
+libpcre3-dev
+libsnmp-dev

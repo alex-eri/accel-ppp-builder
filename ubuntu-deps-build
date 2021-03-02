@@ -5,3 +5,4 @@ libnl-3-dev
 libssl-dev
 libpcre3-dev
 libsnmp-dev
+linux-headers-generic

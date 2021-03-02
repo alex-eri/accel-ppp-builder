@@ -13,12 +13,10 @@ mkdir -p deb
 
 pushd build/
 
-export CPACK_DEBIAN_PACKAGE_DEPENDS="$(cat /scripts/ubuntu-deps-runtime)"
-
-cmake -DSHAPER=TRUE -DNETSNMP=TRUE -DLUA=TRUE ../accel-ppp/ 
+cmake -DCPACK_DEBIAN_PACKAGE_DEPENDS="$(cat /scripts/ubuntu-deps-runtime)" -DSHAPER=TRUE -DNETSNMP=TRUE -DLUA=TRUE -DCMAKE_INSTALL_PREFIX=/usr/  ../accel-ppp/ 
 cmake --build .
 
-cpack -G DEB
+cpack -G DEB 
 for file in *.deb; do
     mv "$file" ../deb/"${file%.deb}_ubuntu.deb"
 done
